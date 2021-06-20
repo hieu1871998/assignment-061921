@@ -13,7 +13,6 @@ function loadData() {
 window.onload = loadData;
 function submitForm() {
     totalMarks = parseInt(scienceMark.value) + parseInt(historyMark.value) + parseInt(mathMark.value) + parseInt(englishMark.value) + parseInt(geographyMark.value);
-    console.log(nameExist);
     checkValues();   
 }
 function checkValues() {
