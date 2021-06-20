@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Academy Records</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <header class="header background__primary-color shadow">
+        <div class="header-row">
+            <div class="header-logo text-color__light"></div>
+            <a class="header-title text-color__light" href="marks.html">Student Academy Records</a>
+        </div>
+    </header>
+    <main class="main-layout">
+        <div class="form-container shadow">
+            <div class="form-title-row background__primary-color text-color__light rounded-corner__2px">
+                <span class="form-title">Student's Marks</span>
+            </div>
+            <form class="form">
+                    <div class="form-row">
+                        <div class="form-column">
+                            <span class="form-label-error"></span><label for="studentName" class="form-label text-color__dark">Student Name:</label>
+                        </div>
+                        <div class="form-column text-color__dark">
+                            <select id="studentName" name="studentName" class="form-input text-color__dark rounded-corner__2px" onchange="resetLabel()">
+                                <option value="">Select</option>
+                                <option value="James">James</option>
+                                <option value="Brown">Brown</option>
+                                <option value="Alex">Alex</option>
+                                <option value="Richard">Richard</option>
+                                <option value="George">George</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-column">
+                            <span class="form-label-error"></span><label for="science" class="form-label text-color__dark">Science:</label>
+                        </div>
+                        <div class="form-column">
+                            <input id="science" type="number" name="science" placeholder="0" min="0" max="10" class="form-input text-color__dark rounded-corner__2px"onchange="resetLabel()">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-column">
+                            <span class="form-label-error"></span><label for="history" class="form-label text-color__dark">History:</label>
+                        </div>
+                        <div class="form-column">
+                            <input id="history" type="number" name="history" placeholder="0" min="0" max="10" class="form-input text-color__dark rounded-corner__2px"onchange="resetLabel()">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-column">
+                            <span class="form-label-error"></span><label for="mathematics" class="form-label text-color__dark">Mathematics:</label>
+                        </div>
+                        <div class="form-column">
+                            <input id="mathematics" type="number" name="mathematics" placeholder="0" min="0" max="10" class="form-input text-color__dark rounded-corner__2px"onchange="resetLabel()">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-column">
+                            <span class="form-label-error"></span><label for="english" class="form-label text-color__dark">English:</label>
+                        </div>
+                        <div class="form-column">
+                            <input id="english" type="number" name="english" placeholder="0" min="0" max="10" class="form-input text-color__dark rounded-corner__2px"onchange="resetLabel()">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-column">
+                            <span class="form-label-error"></span><label for="geography" class="form-label text-color__dark">Geography:</label>
+                        </div>
+                        <div class="form-column">
+                            <input id="geography" type="number" name="geography" placeholder="0" min="0" max="10" class="form-input text-color__dark rounded-corner__2px"onchange="resetLabel()">
+                        </div>
+                    </div>
+                    <div class="form-button-row">
+                        <div class="form__button-area">
+                            <button id="submit" type="button" class="button button__no-border background__primary-color text-color__light rounded-corner__2px" onclick="submitForm(); return false;"><span>Submit</span></button>
+                            <button id="reset" type="reset" class="button button__border background__light text-color__dark rounded-corner__2px" onclick="resetLabel()"><span>Reset</span></button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div id="table-container" class="table-container shadow">
+                <div class="table-header-row"><span class="table-header">Students' Performance</span></div>
+                <table id="table" class="table">
+                    <tr>
+                        <th class="table-header-row text-color__dark"></th>
+                        <th class="table-header-row text-color__dark">Science</th>
+                        <th class="table-header-row text-color__dark">History</th>
+                        <th class="table-header-row text-color__dark">Math</th>
+                        <th class="table-header-row text-color__dark">English</th>
+                        <th class="table-header-row text-color__dark">Geography</th>
+                        <th class="table-header-row text-color__dark">Total Marks</th>
+                    </tr>  
+                </table>
+            </div>
+        </div>
+        <div id="alert-success" class="alert-box alert__success">
+            <span class="alert__success-icon"></span><span class="alert-text">Students' performance recorded.</span>
+        </div>
+        <div id="alert-name" class="alert-box alert__error">
+            <span class="alert__error-icon"></span><span class="alert-text">Please choose a student.</span>
+        </div>
+        <div id="alert-name-exist" class="alert-box alert__error">
+            <span class="alert__error-icon"></span><span class="alert-text">This student is already in the database.</span>
+        </div>
+        <div id="alert-mark" class="alert-box alert__error">
+            <span class="alert__error-icon"></span><span class="alert-text">Please input the right mark value (mark range: 0-10).</span>
+        </div>
+    </main>
+</body>
+</html>
