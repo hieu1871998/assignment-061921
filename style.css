@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'FabricMDL2Icons';
-    src: url(fonts/fabric-icons-88e88feb.woff) format('woff');
+    src: url(/fonts/fabric-icons-88e88feb.woff) format('woff');
 }
 * {box-sizing: border-box;}
 html, body {
@@ -217,7 +217,6 @@ html, body {
     align-items: center;
     opacity: 0;
     transition: 0.5s;
-    pointer-events: none;
 }
 .alert__success {background-color: #b3ffb3;}
 .alert__error {background-color: #ffd6d6;}
