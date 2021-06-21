@@ -14,7 +14,7 @@
     <header class="header background__primary-color shadow">
         <div class="header-row">
             <div class="header-logo text-color__light"></div>
-            <a class="header-title text-color__light" href="index.html">Student Academy Records</a>
+            <a class="header-title text-color__light" href="marks.html">Student Academy Records</a>
         </div>
     </header>
     <main class="main-layout">
@@ -28,8 +28,8 @@
                             <span class="form-label-error"></span><label for="studentName" class="form-label text-color__dark">Student Name:</label>
                         </div>
                         <div class="form-column text-color__dark">
-                            <select id="studentName" name="studentName" class="form-input text-color__dark rounded-corner__2px" onchange="resetLabel()">
-                                <option value="">Select</option>
+                            <select id="studentName" name="studentName" class="form-input text-color__dark rounded-corner__2px" onchange="resetLabel();loadData();">
+                                <option value="" selected="selected">Select</option>
                                 <option value="James">James</option>
                                 <option value="Brown">Brown</option>
                                 <option value="Alex">Alex</option>
@@ -81,7 +81,7 @@
                     <div class="form-button-row">
                         <div class="form__button-area">
                             <button id="submit" type="button" class="button button__no-border background__primary-color text-color__light rounded-corner__2px" onclick="submitForm(); return false;"><span>Submit</span></button>
-                            <button id="reset" type="reset" class="button button__border background__light text-color__dark rounded-corner__2px" onclick="resetLabel()"><span>Reset</span></button>
+                            <button id="reset" type="reset" class="button button__border background__light text-color__dark rounded-corner__2px" onclick="resetLabel(); resetValue(); return false;"><span>Reset</span></button>
                         </div>
                     </div>
                 </div>
@@ -101,7 +101,7 @@
                 </table>
             </div>
         </div>
-        <div id="alert-success" class="alert-box alert__success">
+        <div id="alert-success" class="alert-box alert__success" onclick="hideAlertBox()">
             <span class="alert__success-icon"></span><span class="alert-text">Students' performance recorded.</span>
         </div>
         <div id="alert-name" class="alert-box alert__error">
